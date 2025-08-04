@@ -65,3 +65,4 @@ For more information on using the Angular CLI, including detailed command refere
 4 Aug, 12.11 - WIP Layouting -> Going Rest
 4 Aug, 13.02 - Continuing
 4 Aug, 14.24 - WIP Basic Functionality CRUD -> Going Rest
+4 Aug, 14.50 - continuing
