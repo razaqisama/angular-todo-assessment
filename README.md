@@ -62,3 +62,5 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## TIMEKEEPER
 4 Aug, 11.03 AM - Init Project
+4 Aug, 12.11 PM - WIP Layouting -> Going Rest
+4 Aug, 13.02 PM - Continuing
