@@ -1,0 +1,65 @@
+.todo-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.todo-card-header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #000;
+}
+
+.todo-card-header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.todo-card-header-priority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 2rem;
+  border-radius: 0.5rem;
+  background: green;
+  color: #fff;
+  gap: 0.5rem;
+}
+
+.todo-card-header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.todo-card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.todo-card-footer-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.todo-card-footer-button.update {
+  background-color: #000;
+  color: #fff;
+}
+
+.todo-card-footer-button.delete {
+  background-color: #f00;
+  color: #fff;
+}

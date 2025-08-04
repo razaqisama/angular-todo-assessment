@@ -1,0 +1,36 @@
+<div class="todo-board-wrapper">
+  <div class="todo-board-header">
+    <h1>WeDo</h1>
+    <div class="todo-board-header-actions">
+      <div>Filter By Priority</div>
+    </div>
+  </div>
+  <div class="todo-board-container">
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+    <todo-card></todo-card>
+  </div>
+  <div class="todo-board-footer">
+    <button (click)="openModal()">Add New Task</button>
+  </div>
+</div>
+
+<todo-new-task-modal-form [isOpen]="isModalOpen" (close)="closeModal()"></todo-new-task-modal-form>

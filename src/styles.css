@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 0;
+  cursor: default !important;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 { 
+  margin: 0;
+}
+
+h5 {
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+}
