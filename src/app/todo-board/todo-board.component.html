@@ -6,27 +6,15 @@
     </div>
   </div>
   <div class="todo-board-container">
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
-    <todo-card></todo-card>
+    @if (todos().length === 0) {
+      <div class="todo-board-empty">No tasks found</div>
+    } @else {
+      <div class="todo-board-container">
+        @for (todo of todos(); track todo.id) {
+          <todo-card [todo]="todo"></todo-card>
+        }
+      </div>
+    }
   </div>
   <div class="todo-board-footer">
     <button (click)="openModal()">Add New Task</button>

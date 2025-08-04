@@ -1,18 +1,20 @@
 <div class="todo-card-wrapper">
   <div class="todo-card-header">
     <div class="todo-card-header-title">
-      <h1>{{ title() }}</h1>
+      <h1>{{ todo.title }}</h1>
       <div class="todo-card-header-priority">
-        <p>{{ priority() }}</p>
+        <p>{{ todo.priority }}</p>
       </div>
     </div>
-    <p>{{ dueDate() }}</p>
+    <p>{{ todo.dueDate }}</p>
   </div>
   <div class="todo-card-body">
-    <p>{{ description() }}</p>
+    <p>{{ todo.description }}</p>
   </div>
   <div class="todo-card-footer">
-    <button class="todo-card-footer-button delete">Delete</button>
-    <button class="todo-card-footer-button update">Update</button>
+    <button class="todo-card-footer-button delete" (click)="removeTodo()">Delete</button>
+    <button class="todo-card-footer-button update" (click)="openUpdateModal()">Update</button>
   </div>
 </div>
+
+<todo-update-task-modal-form [isOpen]="isOpenUpdateModal" [defaultValues]="todo" (close)="closeModal()"></todo-update-task-modal-form>

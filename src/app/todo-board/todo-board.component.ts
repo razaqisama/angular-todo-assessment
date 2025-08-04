@@ -1,6 +1,8 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import { TodoNewTaskModalFormComponent } from './todo-new-task-modal-form/todo-new-task-modal-form.component';
 import { TodoCardComponent } from './todo-card/todo-card.component';
+import { TodoService } from '../../core/services/todo/todo.service';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'todo-board',
@@ -9,8 +11,11 @@ import { TodoCardComponent } from './todo-card/todo-card.component';
   imports: [TodoNewTaskModalFormComponent, TodoCardComponent]
 })
 export class TodoBoardComponent {
-
+  private todoService = inject(TodoService);
+  
   isModalOpen = signal(false);
+
+  public todos = this.todoService.getTodoList;
 
   openModal() {
     this.isModalOpen.set(true);
