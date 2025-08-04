@@ -1,18 +1,15 @@
-import {Component, inject, Input, signal} from '@angular/core';
+import {Component, Input, signal} from '@angular/core';
 import { Todo, TodoPriority } from '../../../core/services/todo/todo.type';
-import { TodoService } from '../../../core/services/todo/todo.service';
 import { TodoUpdateTaskModalFormComponent } from '../todo-update-task-modal-form/todo-update-task-modal-form.component';
+import { TodoDeleteTaskModalConfirmationComponent } from '../todo-delete-task-modal-confirmation/todo-delete-task-modal-confirmation.component';
 
 @Component({
   selector: 'todo-card',
   templateUrl: './todo-card.component.html',
   styleUrl: './todo-card.component.css',
-  imports: [TodoUpdateTaskModalFormComponent]
+  imports: [TodoUpdateTaskModalFormComponent, TodoDeleteTaskModalConfirmationComponent]
 })
 export class TodoCardComponent {
-
-  private todoService = inject(TodoService);
-
   @Input() todo: Todo = {
     id: '',
     title: '',
@@ -22,16 +19,21 @@ export class TodoCardComponent {
   };
 
   public isOpenUpdateModal = signal(false);
+  public isOpenDeleteModal = signal(false);
 
-  public removeTodo() {
-    this.todoService.removeTodoById(this.todo.id); 
+  public openModal(modal: 'update' | 'delete') {
+    if (modal === 'update') {
+      this.isOpenUpdateModal.set(true);
+    } else {
+      this.isOpenDeleteModal.set(true);
+    }
   }
 
-  public openUpdateModal() {
-    this.isOpenUpdateModal.set(true);
-  }
-
-  public closeModal() {
-    this.isOpenUpdateModal.set(false);
+  public closeModal(modal: 'update' | 'delete') {
+    if (modal === 'update') {
+      this.isOpenUpdateModal.set(false);
+    } else {
+      this.isOpenDeleteModal.set(false);
+    }
   }
 }

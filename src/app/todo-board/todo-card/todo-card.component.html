@@ -2,7 +2,7 @@
   <div class="todo-card-header">
     <div class="todo-card-header-title">
       <h1>{{ todo.title }}</h1>
-      <div class="todo-card-header-priority">
+      <div class="todo-card-header-priority {{ todo.priority.toLowerCase() }}">
         <p>{{ todo.priority }}</p>
       </div>
     </div>
@@ -12,9 +12,10 @@
     <p>{{ todo.description }}</p>
   </div>
   <div class="todo-card-footer">
-    <button class="todo-card-footer-button delete" (click)="removeTodo()">Delete</button>
-    <button class="todo-card-footer-button update" (click)="openUpdateModal()">Update</button>
+    <button class="todo-card-footer-button delete" (click)="openModal('delete')">Delete</button>
+    <button class="todo-card-footer-button update" (click)="openModal('update')">Update</button>
   </div>
 </div>
 
-<todo-update-task-modal-form [isOpen]="isOpenUpdateModal" [defaultValues]="todo" (close)="closeModal()"></todo-update-task-modal-form>
+<todo-update-task-modal-form [isOpen]="isOpenUpdateModal" [defaultValues]="todo" (close)="closeModal('update')"></todo-update-task-modal-form>
+<todo-delete-task-modal-confirmation [isOpen]="isOpenDeleteModal" [id]="todo.id" (close)="closeModal('delete')"></todo-delete-task-modal-confirmation>

@@ -61,3 +61,9 @@
   border: none;
   cursor: pointer;
 }
+
+.form-error {
+  margin-top: 0.5rem;
+  color: red;
+  font-size: 0.8rem;
+}

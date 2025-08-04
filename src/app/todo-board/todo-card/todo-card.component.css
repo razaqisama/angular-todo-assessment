@@ -27,9 +27,22 @@
   align-items: center;
   padding: 0.25rem 2rem;
   border-radius: 0.5rem;
-  background: green;
   color: #fff;
   gap: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.todo-card-header-priority.low {
+  background: green;
+}
+
+.todo-card-header-priority.medium {
+  background: orange;
+}
+
+.todo-card-header-priority.high {
+  background: red;
 }
 
 .todo-card-header h1 {

@@ -1,4 +1,4 @@
-.todo-update-task-modal-form-wrapper {
+.todo-delete-task-modal-form-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   justify-content: center;
 }
 
-.todo-update-task-modal-form-container {
+.todo-delete-task-modal-form-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -22,13 +22,17 @@
   border-radius: 0.5rem;
 }
 
-.todo-update-task-modal-form-title {
+.todo-delete-task-modal-form-title {
   font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
 }
 
-.todo-update-task-modal-form-backdrop {
+.todo-delete-task-modal-form-description {
+  text-align: center;
+}
+
+.todo-delete-task-modal-form-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,26 +42,25 @@
   z-index: 1;
 }
 
-.form-container {
+.todo-delete-task-modal-form-footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
 }
 
-.form-control-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-control-group label {
-  font-size: 0.8rem;
-}
-
-.form-button {
-  background-color: #000;
+.todo-delete-task-button-confirmation {
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
+  width: 100%;
+}
+
+.todo-delete-task-button-confirmation.cancel {
+  background-color: #000;
+}
+
+.todo-delete-task-button-confirmation.confirm {
+  background-color: #f00;
 }

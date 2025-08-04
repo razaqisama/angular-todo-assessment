@@ -12,20 +12,6 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
 ## Building
 
 To build the project run:
@@ -65,4 +51,5 @@ For more information on using the Angular CLI, including detailed command refere
 4 Aug, 12.11 - WIP Layouting -> Going Rest
 4 Aug, 13.02 - Continuing
 4 Aug, 14.24 - WIP Basic Functionality CRUD -> Going Rest
-4 Aug, 14.50 - continuing
+4 Aug, 14.50 - Continuing
+4 Aut, 15.48 - Validation on create and update task

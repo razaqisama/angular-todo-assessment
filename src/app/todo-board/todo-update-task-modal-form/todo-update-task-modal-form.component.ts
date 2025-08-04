@@ -1,5 +1,5 @@
 import {Component, EventEmitter, inject, Input, OnInit, Output, signal} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { TodoService } from '../../../core/services/todo/todo.service';
 import { Todo, TodoPriority } from '../../../core/services/todo/todo.type';
 
@@ -25,11 +25,11 @@ export class TodoUpdateTaskModalFormComponent implements OnInit {
   private todoService = inject(TodoService);
 
   public todoForm = new FormGroup({
-    id: new FormControl(this.defaultValues.id),
-    title: new FormControl(this.defaultValues.title),
-    description: new FormControl(this.defaultValues.description),
-    dueDate: new FormControl(this.defaultValues.dueDate),
-    priority: new FormControl(this.defaultValues.priority),
+    id: new FormControl(this.defaultValues.id, [Validators.required]),
+    title: new FormControl(this.defaultValues.title, [Validators.required]),
+    description: new FormControl(this.defaultValues.description, [Validators.required]),
+    dueDate: new FormControl(this.defaultValues.dueDate, [Validators.required]),
+    priority: new FormControl(this.defaultValues.priority, [Validators.required]),
   });
 
   ngOnInit(): void {
@@ -41,6 +41,11 @@ export class TodoUpdateTaskModalFormComponent implements OnInit {
   }
 
   public onSubmit() {
+    if (this.todoForm.invalid) {
+      this.todoForm.markAllAsTouched();
+      return;
+    }
+
     const todo = this.todoForm.value as Todo;
     this.todoService.updateTodoById(todo.id, todo);
 
