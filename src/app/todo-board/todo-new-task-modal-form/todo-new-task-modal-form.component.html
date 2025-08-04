@@ -1,6 +1,6 @@
 @if (isOpen()) {
-<div class="todo-new-task-modal-form-wrapper">
-  <div (click)="closeModal()" class="todo-new-task-modal-form-backdrop"></div>
+<div class="todo-new-task-modal-form-wrapper" data-test-id="new-task-modal-form">
+  <div (click)="closeModal()" data-test-id="new-task-modal-backdrop" class="todo-new-task-modal-form-backdrop"></div>
   <div class="todo-new-task-modal-form-container" (click)="$event.stopPropagation()">
     <h1 class="todo-new-task-modal-form-title">NEW TASK</h1>
     <form class="form-container" [formGroup]="todoForm" (ngSubmit)="onSubmit()">
