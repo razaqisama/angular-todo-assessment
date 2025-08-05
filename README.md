@@ -7,6 +7,10 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 To start a local development server, run:
 
 ```bash
+npm i
+```
+
+```bash
 ng serve
 ```
 
@@ -21,6 +25,12 @@ ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+To run production build locally:
+
+```bash
+npm run serve:ssr:angular-todo-assessment
+```
 
 ## Running unit tests
 
@@ -40,3 +50,21 @@ ng test
 4 Aug, 17.08 - WIP Unit Test -> Going Rest
 5 Aug, 10.30 - Continuing
 5 Aug, 11.01 - added complete status feature on task
+5 Aug, 11.27 - Update readme / Self Assessment
+
+## Self Assessment
+- Feature completed:
+  - Basic CRUD
+  - Angular SSR
+  - Unit Test (Todo Board)
+  - Make the due date text red if past due
+  - add complete task button to complete task, this will disabling editing the task
+- Feature not completed:
+  - Unit Test (others component)
+- Tools used:
+  - Cursor with agents disabled
+  - Angular v20 Official Documentation 
+- Improvement Ideas:
+  - Complete the unit test please :) 
+  - Make the UI Visually Pleasing
+  - Change the local storage state management to actual database or backend server, this will open the full potential of server side rendering feature.
