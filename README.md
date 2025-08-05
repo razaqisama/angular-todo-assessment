@@ -72,5 +72,6 @@ Based on gemini, my time spent to complete this task is: 5 hours and 49 minutes,
   - add time picker to make the due date task more detailed
   - Crete a form handler service to handle form implementation consistency, e.g validation
   - create shared modal components to make it more modular
+  - Added eslint & prettier to standarized code style
 - Known Bugs:
   - When touch simulation enabled in browser inspection and user want to open the datepicker, datepicker open in a seconds and then immediately closed 
