@@ -20,6 +20,7 @@ export class TodoUpdateTaskModalFormComponent implements OnInit {
     description: '',
     dueDate: '',
     priority: TodoPriority.HIGH,
+    isCompleted: false,
   };
 
   private todoService = inject(TodoService);
@@ -49,6 +50,12 @@ export class TodoUpdateTaskModalFormComponent implements OnInit {
     const todo = this.todoForm.value as Todo;
     this.todoService.updateTodoById(todo.id, todo);
 
+    this.closeModal();
+  }
+
+  public markAsCompleted() {
+    const todo = this.todoForm.value as Todo;
+    this.todoService.updateTodoById(todo.id, { ...todo, isCompleted: true });
     this.closeModal();
   }
 }

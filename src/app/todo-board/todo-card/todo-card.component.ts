@@ -16,6 +16,7 @@ export class TodoCardComponent {
     description: '',
     dueDate: '',
     priority: TodoPriority.HIGH,
+    isCompleted: false,
   };
 
   public isOpenUpdateModal = signal(false);
@@ -35,5 +36,17 @@ export class TodoCardComponent {
     } else {
       this.isOpenDeleteModal.set(false);
     }
+  }
+
+  public formatDate(date: string) {
+    return new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  }
+
+  public isTodoDueDateExpired(date: string) {
+    return new Date(date) < new Date();
   }
 }

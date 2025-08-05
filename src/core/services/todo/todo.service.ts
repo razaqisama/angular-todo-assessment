@@ -28,6 +28,7 @@ export class TodoService {
     const newTodo = {
       ...todo,
       id: crypto.randomUUID(),
+      isCompleted: false,
     };
 
     const newTodos = [...this.todos(), newTodo];

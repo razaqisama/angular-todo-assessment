@@ -37,7 +37,10 @@
           <div class="form-error">{{ todoForm.controls.priority.errors?.['required']?.message }}</div>
         }
       </div>
-      <button class="form-button" type="submit">Save Changes</button>
+      <div class="form-button-group">
+        <button type="button" class="form-button mark-as-completed" (click)="markAsCompleted()">Mark As Completed</button>
+        <button class="form-button" type="submit">Save Changes</button>
+      </div>
     </form>
   </div>
 </div>

@@ -1,19 +1,27 @@
-<div class="todo-card-wrapper">
+<div class="todo-card-wrapper {{ todo.isCompleted ? 'todo-card-completed' : '' }}">
   <div class="todo-card-header">
     <div class="todo-card-header-title">
       <h1>{{ todo.title }}</h1>
+      @if (!todo.isCompleted) {
       <div class="todo-card-header-priority {{ todo.priority.toLowerCase() }}">
         <p>{{ todo.priority }}</p>
       </div>
+      } @else {
+        <div class="todo-card-header-priority completed">
+          <p>Completed</p>
+        </div>
+      }
     </div>
-    <p>{{ todo.dueDate }}</p>
+    @if (!todo.isCompleted) {
+      <p class="{{ isTodoDueDateExpired(todo.dueDate) ? 'todo-card-header-due-date-expired' : '' }}">Due date: {{ formatDate(todo.dueDate.toString()) }}</p>
+    }
   </div>
   <div class="todo-card-body">
     <p>{{ todo.description }}</p>
   </div>
   <div class="todo-card-footer">
     <button class="todo-card-footer-button delete" (click)="openModal('delete')">Delete</button>
-    <button class="todo-card-footer-button update" (click)="openModal('update')">Update</button>
+    <button [disabled]="todo.isCompleted" class="todo-card-footer-button update" (click)="openModal('update')">Update</button>
   </div>
 </div>
 
