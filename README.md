@@ -39,3 +39,4 @@ ng test
 4 Aug, 15.50 - Validation on create and update task
 4 Aug, 17.08 - WIP Unit Test -> Going Rest
 5 Aug, 10.30 - Continuing
+5 Aug, 11.01 - added complete status feature on task
