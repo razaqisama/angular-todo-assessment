@@ -55,7 +55,7 @@ export class TodoUpdateTaskModalFormComponent implements OnInit {
 
   public markAsCompleted() {
     const todo = this.todoForm.value as Todo;
-    this.todoService.updateTodoById(todo.id, { ...todo, isCompleted: true });
+    this.todoService.updateTodoById(todo.id, { ...todo, isCompleted: true, completedAt: new Date().toISOString() });
     this.closeModal();
   }
 }

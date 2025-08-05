@@ -14,6 +14,8 @@
     </div>
     @if (!todo.isCompleted) {
       <p class="{{ isTodoDueDateExpired(todo.dueDate) ? 'todo-card-header-due-date-expired' : '' }}">Due date: {{ formatDate(todo.dueDate.toString()) }}</p>
+    } @else {
+      <p>Completed at: {{ formatDate(todo.completedAt || '') }}</p>
     }
   </div>
   <div class="todo-card-body">

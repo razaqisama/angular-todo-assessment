@@ -11,6 +11,7 @@ export interface Todo {
   dueDate: string;
   priority: TodoPriority;
   isCompleted: boolean;
+  completedAt?: string;
 }
 
 export interface TodoFormPayload {
