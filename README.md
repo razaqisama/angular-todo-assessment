@@ -38,3 +38,4 @@ ng test
 4 Aug, 14.50 - Continuing
 4 Aug, 15.50 - Validation on create and update task
 4 Aug, 17.08 - WIP Unit Test -> Going Rest
+5 Aug, 10.30 - Continuing
