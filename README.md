@@ -54,23 +54,23 @@ ng test
 5 Aug, 11.31 - added completed at status
 
 ## Self Assessment
-Based on gemini, my time spent to complete this task is: 5 hours and 49 minutes.
+Based on gemini, my time spent to complete this task is: 5 hours and 49 minutes, and maybe + more minutes to update this self assessment readme.
 
 - Feature completed:
   - Basic CRUD
   - Angular SSR
-  - Unit Test (Todo Board)
+  - Unit Test (Todo Board only, hehe)
   - Make the due date text red if past due
   - add complete task button to complete task, this will disabling editing the task
-- Feature not completed:
-  - Unit Test (others component)
 - Tools used:
-  - Cursor AI with agents disabled
+  - Cursor AI with agents feature disabled
   - Angular v20 Official Documentation 
 - Improvement Ideas:
   - Complete the unit test please :) 
   - Make the UI Visually Pleasing
   - Change the local storage state management to actual database or backend server, this will open the full potential of server side rendering feature.
-  - add time picker to make the due date task more detailed 
+  - add time picker to make the due date task more detailed
+  - Crete a form handler service to handle form implementation consistency, e.g validation
+  - create shared modal components to make it more modular
 - Known Bugs:
-  - When touch simulation enabled, the datepicker immediately closed after opened.
+  - When touch simulation enabled in browser inspection and user want to open the datepicker, datepicker open in a seconds and then immediately closed 
