@@ -51,8 +51,11 @@ ng test
 5 Aug, 10.30 - Continuing
 5 Aug, 11.01 - added complete status feature on task
 5 Aug, 11.27 - Update readme / Self Assessment
+5 Aug, 11.31 - added completed at status
 
 ## Self Assessment
+Based on gemini, my time spent to complete this task is: 5 hours and 49 minutes.
+
 - Feature completed:
   - Basic CRUD
   - Angular SSR
@@ -62,9 +65,12 @@ ng test
 - Feature not completed:
   - Unit Test (others component)
 - Tools used:
-  - Cursor with agents disabled
+  - Cursor AI with agents disabled
   - Angular v20 Official Documentation 
 - Improvement Ideas:
   - Complete the unit test please :) 
   - Make the UI Visually Pleasing
   - Change the local storage state management to actual database or backend server, this will open the full potential of server side rendering feature.
+  - add time picker to make the due date task more detailed 
+- Known Bugs:
+  - When touch simulation enabled, the datepicker immediately closed after opened.
